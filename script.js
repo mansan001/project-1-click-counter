@@ -15,6 +15,8 @@ let index = 0;
 
 function increment(){
     if(count >= 10){
+        warningTxt.classList.remove(...color_indicator);
+        warningTxt.classList.add(color_indicator[0]);
         warningTxt.innerHTML = "The number cannot go above 10";
     }else{
         warningTxt.innerHTML = "";
@@ -30,6 +32,8 @@ function increment(){
 }
 function decrement(){
     if(count <= -10){
+        warningTxt.classList.remove(...color_indicator);
+        warningTxt.classList.add(color_indicator[1]);
         warningTxt.innerHTML = "The number cannot go below -10";
     }else{
         warningTxt.innerHTML = "";
