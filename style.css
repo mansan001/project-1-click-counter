@@ -1,0 +1,31 @@
+.container{
+    text-align: center;
+    margin-top: 100px;
+    border: 1px solid black;
+    padding: 20px;
+    max-width: 100%;
+}
+.button_design{
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#counter{
+    font-size: 30px;
+    font-weight: bold;
+}
+#warning_text{
+    font-weight: bold;
+    font-size: 20px;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
