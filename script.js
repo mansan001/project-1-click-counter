@@ -56,3 +56,35 @@ function reset(){
     counterDisplay.classList.add(color_indicator[3]);
     warningTxt.innerHTML = "Progress has been reset";
 }
+
+//Keyboard click functionality
+document.addEventListener("keydown", function(event){
+    if(event.key === "ArrowUp"){
+        increment();
+    }else if(event.key === "ArrowDown"){
+        decrement();
+    }else if(event.key === "r" || event.key === "R"){
+        reset();
+    }
+})
+
+//Long pressing click functionality
+//Review this part because I cannot comprehend it at the moment.. my brain hurtsszzz
+let pressTimer;
+
+increaseBtn.addEventListener("mousedown", function(){
+    pressTimer = window.setInterval(function(){
+        increment();
+    }, 200);
+});
+increaseBtn.addEventListener("mouseup", function(){
+    clearInterval(pressTimer);
+});
+decreaseBtn.addEventListener("mousedown", function(){
+    pressTimer = window.setInterval(function(){
+        decrement();
+    }, 200);
+})
+decreaseBtn.addEventListener("mouseup", function(){
+    clearInterval(pressTimer);
+});
